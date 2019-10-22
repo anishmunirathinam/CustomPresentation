@@ -29,4 +29,18 @@ extension SlideInPresentationManager: UIViewControllerTransitioningDelegate {
       )
       return presentationController
     }
+    
+    func animationController(
+      forPresented presented: UIViewController,
+      presenting: UIViewController,
+      source: UIViewController
+    ) -> UIViewControllerAnimatedTransitioning? {
+        return SlideInPresentationAnimator(direction: direction, isPresented: true)
+    }
+
+    func animationController(
+      forDismissed dismissed: UIViewController
+    ) -> UIViewControllerAnimatedTransitioning? {
+        return SlideInPresentationAnimator(direction: direction, isPresented: false)
+    }
 }

@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		F904CE6D2355D8B2008EE271 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F904CE6C2355D8B2008EE271 /* AppDelegate.swift */; };
 		F904CE6F2355D8B2008EE271 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F904CE6E2355D8B2008EE271 /* SceneDelegate.swift */; };
-		F904CE712355D8B2008EE271 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F904CE702355D8B2008EE271 /* ViewController.swift */; };
+		F904CE712355D8B2008EE271 /* PresentingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F904CE702355D8B2008EE271 /* PresentingViewController.swift */; };
 		F904CE742355D8B2008EE271 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F904CE722355D8B2008EE271 /* Main.storyboard */; };
 		F904CE762355D8B4008EE271 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F904CE752355D8B4008EE271 /* Assets.xcassets */; };
 		F904CE792355D8B4008EE271 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F904CE772355D8B4008EE271 /* LaunchScreen.storyboard */; };
+		F947621C235EBF4C00CD8CFE /* SlideInPresentationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F947621B235EBF4C00CD8CFE /* SlideInPresentationAnimator.swift */; };
 		F9532049235D98DE00D87F86 /* SlideInPresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9532048235D98DE00D87F86 /* SlideInPresentationManager.swift */; };
 		F953204B235D9E8C00D87F86 /* PresentedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F953204A235D9E8C00D87F86 /* PresentedViewController.swift */; };
 		F953204D235D9FA800D87F86 /* SlideInPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F953204C235D9FA800D87F86 /* SlideInPresentationController.swift */; };
@@ -22,11 +23,12 @@
 		F904CE692355D8B2008EE271 /* PresentationController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PresentationController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F904CE6C2355D8B2008EE271 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F904CE6E2355D8B2008EE271 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F904CE702355D8B2008EE271 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F904CE702355D8B2008EE271 /* PresentingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentingViewController.swift; sourceTree = "<group>"; };
 		F904CE732355D8B2008EE271 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F904CE752355D8B4008EE271 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F904CE782355D8B4008EE271 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F904CE7A2355D8B4008EE271 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F947621B235EBF4C00CD8CFE /* SlideInPresentationAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInPresentationAnimator.swift; sourceTree = "<group>"; };
 		F9532048235D98DE00D87F86 /* SlideInPresentationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInPresentationManager.swift; sourceTree = "<group>"; };
 		F953204A235D9E8C00D87F86 /* PresentedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentedViewController.swift; sourceTree = "<group>"; };
 		F953204C235D9FA800D87F86 /* SlideInPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInPresentationController.swift; sourceTree = "<group>"; };
@@ -64,16 +66,33 @@
 			children = (
 				F904CE6C2355D8B2008EE271 /* AppDelegate.swift */,
 				F904CE6E2355D8B2008EE271 /* SceneDelegate.swift */,
-				F904CE702355D8B2008EE271 /* ViewController.swift */,
-				F953204C235D9FA800D87F86 /* SlideInPresentationController.swift */,
-				F953204A235D9E8C00D87F86 /* PresentedViewController.swift */,
-				F9532048235D98DE00D87F86 /* SlideInPresentationManager.swift */,
+				F947621E235EC29100CD8CFE /* Controllers */,
+				F947621D235EC27700CD8CFE /* Presentation */,
 				F904CE722355D8B2008EE271 /* Main.storyboard */,
 				F904CE752355D8B4008EE271 /* Assets.xcassets */,
 				F904CE772355D8B4008EE271 /* LaunchScreen.storyboard */,
 				F904CE7A2355D8B4008EE271 /* Info.plist */,
 			);
 			path = PresentationController;
+			sourceTree = "<group>";
+		};
+		F947621D235EC27700CD8CFE /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				F947621B235EBF4C00CD8CFE /* SlideInPresentationAnimator.swift */,
+				F953204C235D9FA800D87F86 /* SlideInPresentationController.swift */,
+				F9532048235D98DE00D87F86 /* SlideInPresentationManager.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		F947621E235EC29100CD8CFE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F904CE702355D8B2008EE271 /* PresentingViewController.swift */,
+				F953204A235D9E8C00D87F86 /* PresentedViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,8 +166,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F947621C235EBF4C00CD8CFE /* SlideInPresentationAnimator.swift in Sources */,
 				F9532049235D98DE00D87F86 /* SlideInPresentationManager.swift in Sources */,
-				F904CE712355D8B2008EE271 /* ViewController.swift in Sources */,
+				F904CE712355D8B2008EE271 /* PresentingViewController.swift in Sources */,
 				F904CE6D2355D8B2008EE271 /* AppDelegate.swift in Sources */,
 				F953204B235D9E8C00D87F86 /* PresentedViewController.swift in Sources */,
 				F953204D235D9FA800D87F86 /* SlideInPresentationController.swift in Sources */,

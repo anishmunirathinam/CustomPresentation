@@ -13,12 +13,10 @@ class SlideInPresentationController: UIPresentationController {
     private var direction: PresentationDirection
     
     override var frameOfPresentedViewInContainerView: CGRect {
-      //1
       var frame: CGRect = .zero
       frame.size = size(forChildContentContainer: presentedViewController,
                         withParentContainerSize: containerView!.bounds.size)
 
-      //2
       switch direction {
       case .right:
         frame.origin.x = containerView!.frame.width*(1.0/3.0)
